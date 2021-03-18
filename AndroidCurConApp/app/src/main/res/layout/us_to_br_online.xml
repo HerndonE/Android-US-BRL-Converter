@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="1dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_menu"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rellay1"
+                android:layout_width="match_parent"
+                android:layout_height="480px"
+                android:alpha="1.0"
+                android:background="@drawable/flag"
+                android:paddingBottom="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/deptImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="152dp"
+                        android:layout_height="143dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginBottom="9dp"
+                        android:adjustViewBounds="true"
+                        android:padding="3dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/curr" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linlay1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rellay1"
+                android:background="#BF9191"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="407dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linlay1"
+                android:background="#ffffff">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/policeDescriptionHeader"
+                            android:layout_width="360dp"
+                            android:layout_height="wrap_content"
+                            android:autoLink="all"
+                            android:text="American Dollars"
+                            android:textColor="#630460"
+                            android:textIsSelectable="true"
+                            android:textSize="28sp" />
+
+                        <EditText
+                            android:id="@+id/currencyInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Enter Currency Amount"
+                            android:inputType="textPersonName"
+                            android:text=""
+                            android:textColor="#000000" />
+
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Convert" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/policeGoalsHeader"
+                            android:layout_width="360dp"
+                            android:layout_height="wrap_content"
+                            android:autoLink="all"
+                            android:text="Brazilian Reals"
+                            android:textColor="#630460"
+                            android:textIsSelectable="true"
+                            android:textSize="28sp" />
+
+                        <TextView
+                            android:id="@+id/amountConverted"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:autoLink="all"
+
+                            android:text=""
+                            android:textColor="#000000"
+                            android:textIsSelectable="true"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/switchCur"
+                        android:layout_gravity="right"
+                        android:text="Switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <!-- FOOTER -->
+    <LinearLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:paddingTop="5dp"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#8CC63F"/>
+        <TextView
+            android:id="@+id/footer_textOne"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#8CC63F"
+            android:background="#630460"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/footer_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Online Mode"
+            android:textColor="#ffffff"
+            android:background="#630460"
+            android:textSize="15dp" />
+    </LinearLayout>
+    <!-- END OF FOOTER -->
+
+</RelativeLayout>
